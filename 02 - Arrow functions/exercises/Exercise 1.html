@@ -35,23 +35,21 @@
   const videos = [...document.querySelectorAll('[data-time]')];
 
   // Filter for only the elements that contain the word 'flexbox'
-  const flexboxVideos = videos.filter(video => video.textContent.match(new RegExp('flexbox', 'gi')) );
-
-  console.log(flexboxVideos);
+  const flexboxVideos = videos.
+    filter(video => video.textContent.match(new RegExp('flexbox', 'gi')) )
 
   // map down to a list of time strings
-  const videosLength = flexboxVideos.map(video => video.dataset.time);
-  console.log(videosLength);
+    .map(video => video.dataset.time)
 
   // map to an array of seconds
-  const videosSeconds = videosLength.map(video => parseInt(video.substring(video.indexOf(':') + 1)));
-  console.log(videosSeconds);
+    .map(video => parseInt(video.substring(video.indexOf(':') + 1)))
 
   // reduce to get total
-  const totalSeconds = videosSeconds.reduce((total, video) => total + video, 0);
-  console.log(totalSeconds);
+    .reduce((total, video) => total + video, 0)
+  
 
   // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
+  console.log(flexboxVideos);
 
 </script>
 </body>
