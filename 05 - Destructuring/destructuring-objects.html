@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring Objects</title>
+</head>
+
+<body>
+    <script>
+    const person = {
+        first: 'Wes',
+        last: 'Bos',
+        country: 'Canada',
+        city: 'Hamilton',
+        twitter: '@wesbos'
+    };
+
+    const { first, twitter, last } = person;
+
+    const fiftyCent = {
+        first: '50',
+        last: 'Cent',
+        links: {
+            social: {
+                twitter: 'https://twitter.com/50cent',
+                facebook: 'https://facebook.com/50cent',
+            },
+            web: {
+                blog: 'https://50cent.com'
+            }
+        }
+    };
+
+    const { twitter: tweet, facebook: fb } = fiftyCent.links.social;
+
+    const settings = { width: 300, color: 'rebeccapurple' };
+
+    const { width = 111, height = 333, color = 'orange', fontSize = 16 } = settings;
+
+    const { w: width2 = 444, h: height2 = 555 } = { w: 999 };
+
+    console.log(width2, height2); //Cool stuff
+    </script>
+</body>
+
+</html>

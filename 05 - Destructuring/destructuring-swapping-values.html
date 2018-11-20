@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring Swapping values</title>
+</head>
+
+<body>
+    <script>
+        let inRing = "Conor McGregor";
+        let onSide = 'Khabib Nurmagomedov';
+
+        console.log('Start of the match');
+        console.log({inRing, onSide});
+
+        [onSide, inRing] = [inRing, onSide];
+
+        console.log('After swapping variables');
+        console.log({inRing, onSide});
+    </script>
+</body>
+
+</html>
