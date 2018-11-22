@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring Returning Multiple Values</title>
+</head>
+
+<body>
+    <script>
+    function convertCurrency(amount) {
+        const converted = {
+            USD: amount * 0.76,
+            GPB: amount * 0.53,
+            AUD: amount * 1.01,
+            MEX: amount * 13.30
+        };
+        return converted;
+    }
+
+    const { USD, AUD, GPB } = convertCurrency(200);
+    console.log(USD, AUD, GPB );
+
+    function tipCalc({ total = 100, tip = 0.2, tax = 0.27 } = {}){
+        return total + (tip * total) + (tax * total);
+    }
+
+    const tipValue = tipCalc({ tip: 0.1, tax: 0.12, total: 200 });
+    console.log(tipValue);
+    </script>
+</body>
+
+</html>

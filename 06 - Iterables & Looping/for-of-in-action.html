@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Iterables & Looping</title>
+</head>
+
+<body>
+    <p>50 Cent</p>
+    <p>50 Cent</p>
+    <p>50 Cent</p>
+    <p>50 Cent</p>
+    <p>50 Cent</p>
+    <script>
+    const cuts = ['Chuck', 'Brisket', 'Shank', 'Short Rib'];
+        
+    // for(const [i, cut] of cuts.entries()){
+    //     console.log(`${i} - ${cut}`);
+    // }
+
+    function addUpNumbers(){
+        // console.log([5,5,5]);
+        // console.log(arguments);
+
+        let total = 0;
+        for (const num of arguments){
+            total += num;
+        }
+
+        console.log(total);
+
+        return total;
+    }
+
+    // addUpNumbers(1, 43, 64, 234, 123);
+
+    const name = '50 Cent';
+    for(char of name){
+        console.log(char);
+    }
+
+    const ps = document.querySelectorAll('p');
+    console.log(ps);
+        
+    for(const parag of ps){
+        parag.addEventListener('click', function(){
+            console.log(this.textContent);
+        });
+    }
+    </script>
+</body>
+
+</html>
